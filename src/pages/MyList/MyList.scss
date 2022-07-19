@@ -1,0 +1,37 @@
+.list {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  .list__title {
+    color: #fff;
+    padding: 90px 40px 0 40px;
+  }
+  .list__movies {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    transition: transform 450ms;
+    color: #fff;
+    cursor: pointer;
+    &.less__movie{
+        justify-content: flex-start;
+        margin-left:10px;
+    }
+    .list__movie {
+      margin-top: 10px;
+      margin-right: 10px;
+      display: flex;
+      justify-content: center;
+      img {
+        max-height: 160px;
+        border-radius: 2px;
+        &:hover {
+            transform: scale(1.1);
+          }
+      }
+      
+    }
+  }
+}

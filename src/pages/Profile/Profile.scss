@@ -1,0 +1,80 @@
+.profile {
+  width: 100%;
+  min-height: 100vh;
+  //background: #141414;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .header {
+    padding-left: 5em;
+  }
+  .profile__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 82px;
+      color: #fff;
+    }
+    .profiles {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      img {
+        margin-left: 2em;
+        width: 170px;
+        height: auto;
+        cursor: pointer;
+        &:hover {
+          border: 3px solid #fff;
+        }
+      }
+      div {
+        margin-left: 2em;
+        width: 170px;
+        height: 170px;
+        background: #aaa;
+        cursor: pointer;
+        &:last-child {
+          margin-left: 0;
+          background-color: transparent;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: auto;
+          svg {
+            cursor: pointer;
+            width: 120px;
+            height: 120px;
+            color: rgba(109, 109, 110, 0.7);
+            &:hover {
+              border: 3px solid #fff;
+            }
+          }
+        }
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+    .profile__button {
+      margin-top: 30px;
+      width: 300px;
+      height: 50px;
+      border: 1px solid #808080;
+      background: transparent;
+      color: #808080;
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 33px;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+}
