@@ -8,8 +8,11 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import useAuthListener from "../../hooks/use-auth-listener";
+import { FirebaseContext } from "../../context/firebase";
+import { useContext } from "react";
 const Header = ({ showNav, signIn }) => {
   const { user }=useAuthListener();
+  const { firestore } = useContext(FirebaseContext);
   const userName = useSelector((state) => state.authReducer.name);
   const [searchTerm, setSearchTerm] = useState("");
   const [active, setActive] = useState(false);
@@ -54,7 +57,8 @@ const Header = ({ showNav, signIn }) => {
               src="/images/users/1.png"
               alt={userName}
               className="header__img"
-              onClick={()=>setDropdownActive(!dropdownActive)}
+              onClick={() => firestore.auth().signOut()}
+
             />
             <div className={`${"header__dropdown"} ${dropdownActive && ".dropdown__active"}`}>
               <div className="dropdown__group">

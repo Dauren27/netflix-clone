@@ -12,8 +12,8 @@ const Accordion = () => {
         <h1 className="accordion__title">Frequently Asked Questions</h1>
         <div className="accordion__frame">
           {faqsData.map((item) => (
-            <ToggleContext.Provider value={{ toggleShow, setToggleShow }}>
-              <div className="accordion__item" key={item.id}>
+            <ToggleContext.Provider value={{ toggleShow, setToggleShow }} key={item.id}>
+              <div className="accordion__item">
                 <div
                   className="accordion__header"
                   onClick={() => setToggleShow(!toggleShow)}
